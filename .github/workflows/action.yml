@@ -1,9 +1,9 @@
-name: ZJU-nCov-Hitcarder Sample
+name: 'ZJU-nCov-Hitcarder Action'
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: '0 23 * * *'
 
 jobs:
   main:
@@ -18,8 +18,6 @@ jobs:
             pushplus_token: PUSHPLUS_TOKEN
             serverchan_key: SERVERCHAN_KEY
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Working
         uses: zzyyuanmi/zju-ncov-hitcarder@master
         with:
